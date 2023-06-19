@@ -1,0 +1,12 @@
+2023-05-17 11:30:36,453 - LOG - INFO - Doing sparse reconstruction task
+2023-05-17 11:30:36,453 - LOG - INFO - Loading model
+2023-05-17 11:30:36,626 - LOG - INFO - Model loaded
+2023-05-17 11:30:36,627 - LOG - INFO - Preparing data
+2023-05-17 11:32:48,146 - LOG - INFO - Doing sparse reconstruction task
+2023-05-17 11:32:48,147 - LOG - INFO - Loading model
+2023-05-17 11:32:48,377 - LOG - INFO - Model loaded
+2023-05-17 11:32:48,379 - LOG - INFO - Preparing data
+2023-05-17 11:33:10,580 - LOG - INFO - Doing sparse reconstruction task
+2023-05-17 11:33:10,580 - LOG - INFO - Loading model
+2023-05-17 11:33:10,719 - LOG - INFO - Model loaded
+2023-05-17 11:33:10,719 - LOG - INFO - Preparing data

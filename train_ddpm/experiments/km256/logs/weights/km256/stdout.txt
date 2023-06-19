@@ -1,0 +1,21 @@
+INFO - main.py - 2023-05-17 11:19:49,572 - Using device: cuda
+INFO - main.py - 2023-05-17 11:19:49,572 - Writing log file to ./experiments/km256/logs/./weights/km256/
+INFO - main.py - 2023-05-17 11:19:49,573 - Exp instance id = 36989
+INFO - main.py - 2023-05-17 11:19:49,573 - Exp comment = 
+ERROR - main.py - 2023-05-17 11:19:57,942 - Traceback (most recent call last):
+  File "main.py", line 229, in main
+    runner.train()
+  File "/root/Diffusion-based-Fluid-Super-resolution-main_v1/train_ddpm/runners/diffusion_tub.py", line 460, in train
+    loss = loss_registry[config.model.type](model, x, t, e, b, x_offset.item(), x_scale.item())
+  File "/root/Diffusion-based-Fluid-Super-resolution-main_v1/train_ddpm/functions/losses.py", line 86, in conditional_noise_estimation_loss
+    output = model(x, t.float(), dx)
+  File "/root/miniconda3/envs/diff/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/Diffusion-based-Fluid-Super-resolution-main_v1/train_ddpm/models/diffusion.py", line 650, in forward
+    h = self.up[i_level].block[i_block](
+  File "/root/miniconda3/envs/diff/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/root/Diffusion-based-Fluid-Super-resolution-main_v1/train_ddpm/models/diffusion.py", line 141, in forward
+    return x+h
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 512.00 MiB (GPU 0; 23.69 GiB total capacity; 22.06 GiB already allocated; 166.94 MiB free; 22.18 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+

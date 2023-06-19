@@ -1,0 +1,44 @@
+!!python/object:argparse.Namespace
+data: !!python/object:argparse.Namespace
+  blur_method: nearest
+  blur_scale: 8
+  category: kmflow
+  channels: 3
+  data_dir: ../autodl-tmp/SR/diffusion/kf_2d_re1000_256_40seed.npy
+  data_kw: ''
+  dataset: kmflow
+  image_size: 256
+  num_workers: 4
+  sample_data_dir: ../autodl-tmp/SR/diffusion/kmflow_sampled_data_irregnew.npz
+  smoothing: true
+  smoothing_scale: 7
+  stat_path: ./pretrained_weights/km256_stats.npz
+diffusion: !!python/object:argparse.Namespace
+  beta_end: 0.02
+  beta_schedule: linear
+  beta_start: 0.0001
+  num_diffusion_timesteps: 1000
+log_dir: ./experiments/kmflow_re1000_rs256_ddim_conditional_new
+model: !!python/object:argparse.Namespace
+  attn_resolutions:
+  - 16
+  ch: 64
+  ch_mult:
+  - 1
+  - 1
+  - 1
+  - 2
+  ckpt_path: ./pretrained_weights/conditional_ckpt.pth
+  dropout: 0.0
+  ema: true
+  ema_rate: 0.9999
+  in_channels: 3
+  num_res_blocks: 1
+  out_ch: 3
+  resamp_with_conv: true
+  type: conditional
+  var_type: fixedlarge
+sampling: !!python/object:argparse.Namespace
+  batch_size: 20
+  guidance_weight: 0.0
+  last_only: true
